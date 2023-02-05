@@ -23,21 +23,22 @@ const Contact = () => {
     e.target.reset();
   };
   return (
-    <div class="max-w-screen-xl my-5 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
-      <div class="flex flex-col justify-between">
+    <div className="max-w-screen-xl my-5 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
+      <div className="flex flex-col justify-between">
         <div>
-          <h2 class="text-4xl lg:text-5xl font-bold leading-tight">
+          <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
             Lets talk about everything!
           </h2>
-          <div class="text-gray-700 mt-8">
-            Hate forms? Send us an <span class="underline">email</span> instead.
+          <div className="text-gray-700 mt-8">
+            Hate forms? Send us an <span className="underline">email</span>{" "}
+            instead.
           </div>
         </div>
-        <div class="mt-8 text-center">
+        <div className="mt-8 text-center">
           <svg
-            class="w-full"
+            className="w-full"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
             id="ae37f038-3a9e-4b82-ad68-fc94ba16af2a"
             data-name="Layer 1"
             viewBox="0 0 1096 574.74"
@@ -51,9 +52,9 @@ const Contact = () => {
                 y2="560.46"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0" stop-color="gray" stop-opacity="0.25" />
-                <stop offset="0.54" stop-color="gray" stop-opacity="0.12" />
-                <stop offset="1" stop-color="gray" stop-opacity="0.1" />
+                <stop offset="0" stopColor="gray" stopOpacity="0.25" />
+                <stop offset="0.54" stopColor="gray" stopOpacity="0.12" />
+                <stop offset="1" stopColor="gray" stopOpacity="0.1" />
               </linearGradient>
               <pattern
                 id="ad310e25-2b04-44c8-bb7b-982389166780"
@@ -116,14 +117,6 @@ const Contact = () => {
                 <path d="M22.85,29a1,1,0,0,0,0-2,1,1,0,0,0,0,2Z" />
                 <path d="M18.24,21.9l.57-.56c.93-.89-.48-2.3-1.41-1.41l-.58.56c-.93.89.49,2.3,1.42,1.41Z" />
               </pattern>
-              <linearGradient
-                id="a964f849-fa65-4178-8cc4-fb8fb10b3617"
-                x1="462.91"
-                y1="660.68"
-                x2="462.91"
-                y2="559.69"
-                xlink:href="#eb6c86d6-45fa-49e0-9a60-1b0612516196"
-              />
             </defs>
             <title>contact us</title>
             <g opacity="0.1">
@@ -427,8 +420,8 @@ const Contact = () => {
               transform="translate(-52 -162.63)"
               fill="none"
               stroke="#3f3d56"
-              stroke-miterlimit="10"
-              stroke-width="4"
+              strokeMiterlimit="10"
+              strokeWidth="4"
             />
             <path
               d="M750.45,545.85a12.31,12.31,0,0,0-6.15-10.09l-2.76,5.45.09-6.6a12.31,12.31,0,1,0,8.82,11.24Z"
@@ -475,8 +468,8 @@ const Contact = () => {
               transform="translate(-52 -162.63)"
               fill="none"
               stroke="#3f3d56"
-              stroke-miterlimit="10"
-              stroke-width="4"
+              strokeMiterlimit="10"
+              strokeWidth="4"
             />
             <path
               d="M140.45,473.85a12.31,12.31,0,0,0-6.15-10.09l-2.76,5.45.09-6.6a12.31,12.31,0,1,0,8.82,11.24Z"
@@ -523,8 +516,8 @@ const Contact = () => {
               transform="translate(-52 -162.63)"
               fill="none"
               stroke="#3f3d56"
-              stroke-miterlimit="10"
-              stroke-width="4"
+              strokeMiterlimit="10"
+              strokeWidth="4"
             />
             <path
               d="M478.39,391.49a12.3,12.3,0,0,1,6.14-10.09l2.76,5.45-.08-6.6a12.62,12.62,0,0,1,4.05-.49,12.31,12.31,0,1,1-12.87,11.73Z"
@@ -614,8 +607,8 @@ const Contact = () => {
               transform="translate(-52 -162.63)"
               fill="none"
               stroke="#3f3d56"
-              stroke-miterlimit="10"
-              stroke-width="4"
+              strokeMiterlimit="10"
+              strokeWidth="4"
             />
             <path
               d="M922.52,469.93a12.29,12.29,0,0,0-6.14-10.08l-2.76,5.45.08-6.6a12.08,12.08,0,0,0-4.05-.49,12.31,12.31,0,1,0,12.87,11.72Z"
@@ -662,8 +655,8 @@ const Contact = () => {
               transform="translate(-52 -162.63)"
               fill="none"
               stroke="#3f3d56"
-              stroke-miterlimit="10"
-              stroke-width="4"
+              strokeMiterlimit="10"
+              strokeWidth="4"
             />
             <path
               d="M1081.52,621.93a12.29,12.29,0,0,0-6.14-10.08l-2.76,5.45.08-6.6a12.08,12.08,0,0,0-4-.49,12.31,12.31,0,1,0,12.87,11.72Z"
@@ -713,43 +706,45 @@ const Contact = () => {
           </svg>
         </div>
       </div>
-      <div class="">
-        <form onSubmit={sendEmail} class="w-full max-w-lg">
+      <div className="">
+        <form onSubmit={sendEmail} className="w-full max-w-lg">
           <div>
-            <span class="uppercase text-sm text-gray-600 font-bold">
+            <span className="uppercase text-sm text-gray-600 font-bold">
               Full Name
             </span>
             <input
               name="name"
-              class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               type="text"
               placeholder="Inter your Name"
             />
           </div>
-          <div class="mt-8">
-            <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
+          <div className="mt-8">
+            <span className="uppercase text-sm text-gray-600 font-bold">
+              Email
+            </span>
             <input
               name="email"
-              class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               type="email"
               required
               placeholder="Inter your Email"
             />
           </div>
-          <div class="mt-8">
-            <span class="uppercase text-sm text-gray-600 font-bold">
+          <div className="mt-8">
+            <span className="uppercase text-sm text-gray-600 font-bold">
               Message
             </span>
             <textarea
               name="message"
-              class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               placeholder="Inter your Message"
             ></textarea>
           </div>
-          <div class="mt-8">
+          <div className="mt-8">
             <button
               type="submit"
-              class="uppercase text-sm font-bold btn btn-primary text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
+              className="uppercase text-sm font-bold btn btn-primary text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
             >
               Send Message
             </button>
