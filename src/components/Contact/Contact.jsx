@@ -1,6 +1,27 @@
+import emailjs from "emailjs-com";
 import React from "react";
 
 const Contact = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_j5ax74i",
+        "template_r30vlp2",
+        e.target,
+        "user_D6NRRRQqBmKlFFSRdDwrA"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
   return (
     <div class="max-w-screen-xl my-5 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
       <div class="flex flex-col justify-between">
@@ -693,36 +714,47 @@ const Contact = () => {
         </div>
       </div>
       <div class="">
-        <div>
-          <span class="uppercase text-sm text-gray-600 font-bold">
-            Full Name
-          </span>
-          <input
-            class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-            type="text"
-            placeholder="Inter your Name"
-          />
-        </div>
-        <div class="mt-8">
-          <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
-          <input
-            class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-            type="text"
-            placeholder="Inter your Email"
-          />
-        </div>
-        <div class="mt-8">
-          <span class="uppercase text-sm text-gray-600 font-bold">Message</span>
-          <textarea
-            class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-            placeholder="Inter your Message"
-          ></textarea>
-        </div>
-        <div class="mt-8">
-          <button class="uppercase text-sm font-bold btn btn-primary text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
-            Send Message
-          </button>
-        </div>
+        <form onSubmit={sendEmail} class="w-full max-w-lg">
+          <div>
+            <span class="uppercase text-sm text-gray-600 font-bold">
+              Full Name
+            </span>
+            <input
+              name="name"
+              class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              type="text"
+              placeholder="Inter your Name"
+            />
+          </div>
+          <div class="mt-8">
+            <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
+            <input
+              name="email"
+              class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              type="email"
+              required
+              placeholder="Inter your Email"
+            />
+          </div>
+          <div class="mt-8">
+            <span class="uppercase text-sm text-gray-600 font-bold">
+              Message
+            </span>
+            <textarea
+              name="message"
+              class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              placeholder="Inter your Message"
+            ></textarea>
+          </div>
+          <div class="mt-8">
+            <button
+              type="submit"
+              class="uppercase text-sm font-bold btn btn-primary text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
